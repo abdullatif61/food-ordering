@@ -1,10 +1,11 @@
 import { useState } from "react";
 import Logo from "../ui/Logo";
-import {FaUserAlt, FaSearch} from "react-icons/fa"
-import {HiShoppingCart} from "react-icons/hi"
+import { FaUserAlt, FaSearch } from "react-icons/fa";
+import { HiShoppingCart } from "react-icons/hi";
+import Search from "../ui/Search";
 
 function Header() {
-  const [isSearch, setIsSearch] = useState(false)
+  const [isSearch, setIsSearch] = useState(false);
   return (
     <div className="h-[5.5rem] bg-secondary ">
       <div className="container mx-auto flex justify-between text-white items-center h-full">
@@ -48,15 +49,32 @@ function Header() {
           </ul>
         </nav>
         <div className="flex gap-x-4 items-center ">
-          <a href=""> <FaUserAlt/> </a>
-          <a href=""> <HiShoppingCart/> </a>
-          <button className="" onClick={()=>{setIsSearch(!isSearch)}} > <FaSearch/> </button>
+          <a href="">
+            {" "}
+            <FaUserAlt />{" "}
+          </a>
+          <a href="">
+            {" "}
+            <HiShoppingCart />{" "}
+          </a>
+          <button
+            className=""
+            onClick={() => {
+              setIsSearch(!isSearch);
+            }}
+          >
+            {" "}
+            <FaSearch />{" "}
+          </button>
           <a href="">
             <button className="btn-primary uppercase">online satış</button>
           </a>
         </div>
       </div>
-      {isSearch && <div className="text-9xl">use state kullanıldı </div> }
+
+      {isSearch && (
+        <Search setIsSearch={setIsSearch}></Search>
+      )}
     </div>
   );
 }
