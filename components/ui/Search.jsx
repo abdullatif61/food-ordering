@@ -1,6 +1,6 @@
-import React from "react";
 import OutsideClickHandler from "react-outside-click-handler";
 import Title from "../ui/Title";
+import{AiFillCloseCircle} from "react-icons/ai"
 
 function Search({ setIsSearch }) {
   return (
@@ -16,13 +16,66 @@ function Search({ setIsSearch }) {
         }}
       >
         <div className="w-full h-full grid place-content-center ">
-          <div className="z-50 relative">
+          <div className="z-50 relative border-2 p-5 w-[600px] h-[600px] bg-white ">
             <Title
-              addClass="text-9xl uppercase  "
+              addClass="text[40px] uppercase text-center "
               propsgonder={"ne gelirse senin ile o gelir elinle gibi bişi"}
             >
-              Title
+              Search
             </Title>
+            <input
+              type="text"
+              placeholder="search..."
+              className="w-full border my-10"
+            />
+
+            <ul>
+              <li className="flex items-center justify-between p-1 transition-all hover:bg-primary ">
+                <div className="relative flex   ">
+                  <img
+                    src="/images/pizza.jpg"
+                    width={50}
+                    height={50}
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+                <span className="font-bold">Pizza</span>
+                <span className="font-bold">$10</span>
+              </li>
+            </ul>
+            <ul>
+              <li className="flex items-center justify-between p-1 transition-all hover:bg-primary ">
+                <div className="relative flex   ">
+                  <img
+                    src="/images/pizza.jpg"
+                    width={50}
+                    height={50}
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+                <span className="font-bold">Pizza</span>
+                <span className="font-bold">$10</span>
+              </li>
+            </ul>
+            <ul>
+              <li className="flex items-center justify-between p-1 transition-all hover:bg-primary ">
+                <div className="relative flex   ">
+                  <img
+                    src="/images/pizza.jpg"
+                    width={50}
+                    height={50}
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+                <span className="font-bold">Pizza</span>
+                <span className="font-bold">$10</span>
+              </li>
+            </ul>
+            <AiFillCloseCircle className="absolute top-2 right" />
+
           </div>
         </div>
       </OutsideClickHandler>
