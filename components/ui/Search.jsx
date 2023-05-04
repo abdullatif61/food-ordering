@@ -1,13 +1,13 @@
 import OutsideClickHandler from "react-outside-click-handler";
 import Title from "../ui/Title";
-import{AiFillCloseCircle} from "react-icons/ai"
+import { AiFillCloseCircle } from "react-icons/ai";
 
 function Search({ setIsSearch }) {
   return (
     <div
       className="fixed top-0 left-0 w-screen h-screen  z-30 
         after:content-[''] after:w-screen after:h-screen after:bg-white after:absolute after:top-0 
-        after:left-0 grid
+        after:left-0 after:opacity-60 grid 
     "
     >
       <OutsideClickHandler
@@ -16,9 +16,9 @@ function Search({ setIsSearch }) {
         }}
       >
         <div className="w-full h-full grid place-content-center ">
-          <div className="z-50 relative border-2 p-5 w-[600px] h-[600px] bg-white ">
+          <div className="z-50 relative border-2 p-5 md:w-[600px] w-[370px] bg-white rounded-3xl ">
             <Title
-              addClass="text[40px] uppercase text-center "
+              addClass="text[40px] uppercase text-center  "
               propsgonder={"ne gelirse senin ile o gelir elinle gibi bişi"}
             >
               Search
@@ -74,8 +74,11 @@ function Search({ setIsSearch }) {
                 <span className="font-bold">$10</span>
               </li>
             </ul>
-            <AiFillCloseCircle className="absolute top-2 right" />
-
+            <button    onClick={() => {
+          setIsSearch(false);
+        }} className="absolute top-2 right-2" >
+              <AiFillCloseCircle className="hover:text-primary transition-all h-6 w-6"  />
+            </button>
           </div>
         </div>
       </OutsideClickHandler>
