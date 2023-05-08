@@ -5,7 +5,7 @@ import { AiFillCloseCircle } from "react-icons/ai";
 function Nav({ setIsNav }) {
   return (
     <div
-      className="fixed top-0 left-0 w-screen h-screen  z-30 
+      className="fixed top-0 left-0 w-screen h-screen  z-30  
         after:content-[''] after:w-screen after:h-screen after:bg-white after:absolute after:top-0 
         after:left-0  grid 
     "

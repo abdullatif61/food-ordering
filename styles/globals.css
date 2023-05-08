@@ -29,6 +29,17 @@ body {
 .btn-primary{
   @apply px-[30px] py-[8px] hover:opacity-70 rounded-3xl bg-primary transition-all
 }
+.slick-dots{
+  @apply !flex 
+}
+.slick-dots li{
+  @apply m-0
+}
+.slick-dots .slick-active div{
+  @apply bg-primary w-4 h-4 mt-9
+}
+
+
 
 
 /* body {

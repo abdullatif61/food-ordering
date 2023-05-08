@@ -5,13 +5,15 @@ import { HiShoppingCart } from "react-icons/hi";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Search from "../ui/Search";
 import Nav from "../ui/Nav";
-
+import { useRouter } from 'next/router'
 function Header() {
   const [isSearch, setIsSearch] = useState(false);
   const [IsNav, setIsNav] = useState(false);
+  const router = useRouter();
+  console.log(router.asPath);
   return (
-    <div className="h-[5.5rem] bg-secondary  ">
-      <div className="container mx-auto flex justify-between text-white items-center h-full  ">
+    <div className={`h-[5.5rem] ${router.asPath === "/" ? "bg-transparent" : "bg-secondary"} z-50 relative  right-0 `} >
+      <div className=" sm:px-10 px-4 flex justify-between text-white items-center h-full w-full  left-0 right-0 ">
         <div>
           <Logo />
         </div>
@@ -76,7 +78,7 @@ function Header() {
             <FaSearch />{" "}
           </button>
           <a href="" className="md:inline-block hidden">
-            <button className="btn-primary uppercase">online satış</button>
+            <button className="btn-primary uppercase whitespace-nowrap  "><p>online satış</p> </button>
           </a>
         
         </div>

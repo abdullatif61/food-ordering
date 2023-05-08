@@ -18,8 +18,7 @@ function Search({ setIsSearch }) {
         <div className="w-full h-full grid place-content-center ">
           <div className="z-50 relative border-2 p-5 md:w-[600px] w-[370px] bg-white rounded-3xl ">
             <Title
-              addClass="text[40px] uppercase text-center  "
-              propsgonder={"ne gelirse senin ile o gelir elinle gibi bişi"}
+              addClass="text[40px] uppercase text-center   "
             >
               Search
             </Title>
