@@ -39,6 +39,15 @@ body {
   @apply bg-primary w-4 h-4 mt-9
 }
 
+.satir-sinirlama{
+  
+  display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical; 
+    overflow:hidden;
+    
+
+}
 
 
 
