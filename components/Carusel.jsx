@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import React from "react";
 import Title from "./ui/Title";
 import Slider from "react-slick";
@@ -26,11 +26,11 @@ const Carusel = () => {
     >
       <div className="absolute top-0 left-0 w-full h-full ">
         <Image
-          src={"/images/burger.jpg"}
+          src="/images/burger.jpg"
           alt=""
           style={{ objectFit: "cover" }}
           priority={true} // {false} | {true}
-          layout="fill"
+          fill
         />{" "}
       </div>
       <div className="px-20">
@@ -56,6 +56,7 @@ const Carusel = () => {
               </p>
               <button className="btn-primary">Satın Al</button>
             </div>
+            
           </div>
           <div>
             <div className=" text-white  mt-48 flex flex-col items-start gap-y-10  sm:mx-20 mx-auto ">
