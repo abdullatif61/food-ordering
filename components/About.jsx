@@ -8,8 +8,13 @@ const About = () => {
       <div className=" my-auto  container  mx-auto grid sm:grid-cols-2 grid-cols-1 w-4/5 h-full 
        text-center content-center items-center justify-between ">
         <div className="place-content-center  sm:order-1 order-2 grid  ">
-          <div className="relative w-[375px] h-[600px]   ">
-            <Image src="/images/about-img.png" alt="" fill />
+          <div className="relative h-[600px] w-[375px]  ">
+            <Image src="/images/about-img.png"
+            alt=""
+            loading="lazy"
+            fill
+        
+             />
           </div>
         </div>
 
